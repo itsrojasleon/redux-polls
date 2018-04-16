@@ -1,0 +1,25 @@
+{
+  "name": "polls",
+  "version": "1.0.0",
+  "description": "Redux polls course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rojasleon/redux-polls.git"
+  },
+  "keywords": [
+    "Redux",
+    "React",
+    "Webpack",
+    "Postcss"
+  ],
+  "author": "Juan Luis Rojas León",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rojasleon/redux-polls/issues"
+  },
+  "homepage": "https://github.com/rojasleon/redux-polls#readme"
+}
