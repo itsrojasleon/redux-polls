@@ -8,6 +8,8 @@ import LoadingBar from 'react-redux-loading'
 import Leaderboard from './Leaderboard'
 import AddPoll from './AddPoll'
 
+import Poll from './Poll'
+
 class App extends Component {
   componentDidMount() {
     this.props.dispatch(handleInitialData())
@@ -18,7 +20,7 @@ class App extends Component {
         <LoadingBar />
         {this.props.loading === true
           ? <div>Loading...</div>
-          : <AddPoll />
+          : <Poll match={{params: {id: 'loxhs1bqm25b708cmbf3g'}}} />
         }
       </div>
     )
