@@ -4,7 +4,7 @@ import { receiveUsers } from './users'
 import { receivePolls } from './polls'
 import { setAuthedUser } from './authedUser'
 
-const AUTHED_ID = 'rojasleon'
+const AUTHED_ID = 'tylermcginnis'
 
 export function handleInitialData() {
   return (dispatch) => {
