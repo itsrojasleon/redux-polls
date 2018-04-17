@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { handleInitialData } from '../actions/shared'
 import { connect } from 'react-redux'
 
@@ -9,6 +10,7 @@ import Leaderboard from './Leaderboard'
 import AddPoll from './AddPoll'
 
 import Poll from './Poll'
+import Nav from './Nav'
 
 class App extends Component {
   componentDidMount() {
@@ -16,13 +18,23 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
-        <LoadingBar />
-        {this.props.loading === true
-          ? <div>Loading...</div>
-          : <Poll match={{params: {id: 'loxhs1bqm25b708cmbf3g'}}} />
-        }
-      </div>
+      <Router>
+        <Fragment>
+          <LoadingBar />
+          <div className="container">
+            <Nav />
+            {this.props.loading === true
+              ? <div>Loading...</div>
+              : <div>
+                  <Route exact path="/" component={Dashboard} />
+                  <Route path="/leaderboard" component={Leaderboard} />
+                  <Route path="/polls/:id" component={Poll} />
+                  <Route path="/add" component={AddPoll} />
+                </div>
+            }
+          </div>
+        </Fragment>
+      </Router>
     )
   }
 }
