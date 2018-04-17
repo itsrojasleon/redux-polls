@@ -1,11 +1,11 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack')
 
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
   template: './src/index.html',
   filename: './index.html',
-});
+})
 
 const config = {
   entry: [
@@ -38,7 +38,7 @@ const config = {
         use: [
           'style-loader',
           { loader: 'css-loader', options: { importLoaders: 1 } },
-          'postcss-loader',
+          // 'postcss-loader',
         ]
       },
       {
